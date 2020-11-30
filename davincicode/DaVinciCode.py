@@ -9,7 +9,7 @@ import shutil
 import pandas as pd
 import numpy as np
 
-import icicle_plot
+from . import icicle_plot
 import plotly.express as px
 import plotly.graph_objects as go
 from jupyter_dash import JupyterDash
@@ -523,6 +523,7 @@ class DaVinciCode():
             #         ], style= {'right': 37, 'position': 'absolute'})
             #     ], style={'margin-left': '5%'})
         ], style={'height': '100%', 'overflow': 'hidden'})
+        
         @app.callback(
             Output('icicle-wrap', 'children'),
             [Input('metric-slider', 'value'),
